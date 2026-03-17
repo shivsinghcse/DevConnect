@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useState } from "react"
+import { BASE_URL } from "../utils/constants"
 const Signup = () => {
 
   const [firstName, setFirstName] = useState("")
@@ -10,13 +11,13 @@ const Signup = () => {
   const handleSignup = async () => {
     try
     {
-      await axios.post("http://127.0.0.1:7777/signup", {
+      const res = await axios.post(BASE_URL + "/signup", {
         firstName,
         lastName,
         emailId,
         password,
       }, {withCredentials: true})
-      console.log("done");
+      console.log(res);
     }
     catch(err)
     {
