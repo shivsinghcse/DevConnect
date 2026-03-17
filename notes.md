@@ -7,4 +7,4 @@
 ```
 means app is running in strict mode
 
-- 
+- <html lang="en" data-theme="light"> for light theme
