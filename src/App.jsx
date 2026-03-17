@@ -1,7 +1,9 @@
+import Navbar from "./components/Navbar";
+
 const App = () => {
   return (
     <>
-      <h1>Dev Connect</h1>
+      <Navbar />
     </>
   )
 }
