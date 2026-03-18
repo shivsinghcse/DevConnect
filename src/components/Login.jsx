@@ -9,6 +9,7 @@ addUser
 const Login = () => {
   const [emailId, setEmailId] = useState("")
   const [password, setPassword] = useState("")
+  const [error, setError]  = useState("")
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
@@ -27,7 +28,8 @@ const Login = () => {
     }
     catch(err)
     {
-      console.log(err);
+      setError(err?.response?.data || "Something went wrong!!")
+      
     }
   }
 
@@ -41,6 +43,8 @@ const Login = () => {
 
         <label className="label">Password</label>
         <input type="password" className="input" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+
+        <p className="text-red-500 mt-2 text-center">{error}</p>
 
         <button onClick={handleLogin} className="btn btn-neutral mt-4">Login</button>
       </fieldset>
