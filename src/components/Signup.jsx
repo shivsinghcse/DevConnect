@@ -42,6 +42,8 @@ const Signup = () => {
         <input type="password" className="input" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
 
         <button onClick={handleSignup} className="btn btn-neutral mt-4">Signup</button>
+
+        <p className="text-center">Don't have an account? <Link to={'/signup'} className="text-indigo-600">Sign up</Link></p>
       </fieldset>
     </div>
   )
