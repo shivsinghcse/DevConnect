@@ -1,7 +1,7 @@
 
 const UserCard = ({user}) => {
     const {firstName, lastName, about, age, gender, photoUrl} = user
-    console.log("pg", user);
+    // console.log("pg", user);
     return (
     <div className="flex justify-center items-center h-[80vh]">
         <div className="card bg-base-300 w-96 shadow-sm">
